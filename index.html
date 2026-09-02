@@ -62,18 +62,18 @@
         }
 
         .download-btn {
+            display: inline-block;
             background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
             color: white;
-            border: none;
             padding: 18px 52px;
             font-size: 1.15rem;
             font-weight: 600;
             border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
+            text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px -5px rgba(139, 92, 246, 0.4);
         }
 
         .download-btn:hover {
@@ -90,26 +90,7 @@
     <div class="container">
         <h1>wywerndlc</h1>
         <p>Современное дополнение для Minecraft 1.21.4</p>
-        <button class="download-btn" onclick="downloadMods()">Скачать</button>
+        <a href="https://github.com/zon1re/wywerndlc/raw/main/wyvernpepe-0.1-recode.jar" download="wyvernpepe-0.1-recode.jar" class="download-btn">Скачать</a>
     </div>
-
-    <script>
-        function downloadMods() {
-            const files = [
-                'https://github.com/zon1re/wywerndlc/raw/main/wyvernpepe-0.1-recode.jar',
-            ];
-
-            files.forEach((url, index) => {
-                setTimeout(() => {
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = '';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                }, index * 500);
-            });
-        }
-    </script>
 </body>
 </html>
